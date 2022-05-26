@@ -1,0 +1,185 @@
+
+@charset "utf-8";
+
+@font-face {
+    font-family: 'android';
+    src: url('fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&family=Ubuntu:wght@300&display=swap');
+
+* {
+    font-family: var(--fonte-padrao);
+    margin: 0px;
+    padding: 0px;
+}
+
+/*cores personalizadas projeto CursoemVideo ytilizando o método de variáveis*/
+:root {
+    --cor1: #c5ebd6;
+    --cor2: #83e1ad;
+    --cor3: #3ddc84;
+    --cor4: #2fa866;
+    --cor5: #1a5c37;
+    --cor6: #063d1e;
+
+    --fonte-android: 'android',cursive;
+    --fonte-padrao: 'ubuntu', Arial, sans-serif;
+    --degrade-principal: linear-gradient(to top, var(--cor5)25%, var(--cor4), var(--cor3));
+    --degrade-nav: linear-gradient(to top, var(--cor6), var(--cor5));
+
+    --sombra: 0px 0px 70px var(--cor5);
+}
+
+header {
+    color: white;
+    text-align: center;
+    padding: 15px;
+    background-image: var(--degrade-principal);
+}
+
+header>h1 {
+    font-size: 2.4em;;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 3px black;
+}
+
+header>p {
+    max-width: 600px;
+    padding: 10px;
+    margin: auto;
+    text-shadow: 0px 0px 3px black;
+}
+
+nav {
+    padding: 10px;
+    background-image: var(--degrade-nav);
+    font-weight: bold;
+    box-shadow: 0px 7px 7px var(--cor5);
+}
+
+nav>a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    transition-duration: .5s;
+}
+
+nav>a:hover {
+    color: rgb(197, 192, 170);
+    text-decoration: underline;
+}
+
+body {
+    background-color: var(--cor1);
+}
+
+
+main {
+    margin: auto;
+    min-width: 320px;
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 0px 0px 10px var(--cor5);
+    padding: 15px 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+main p {
+    margin: 15px;
+    text-align: justify;
+    text-indent: 15px;
+    line-height: 2em;
+}
+
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor6);
+    background-color: var(--cor2);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+main a.externo::after {
+    content: '\00A0''🔗';
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor5);
+    background-color: var(--cor1);
+}
+
+.android {
+    margin: 0px 15px;
+    font-family: var(--fonte-android);
+    color: rgb(7, 97, 52);
+}
+
+h2 {
+    padding: 5px;
+    margin: 15px;
+    font-size: 1.2em;
+    background-image: linear-gradient(to right, var(--cor2), transparent);
+}
+
+img {
+    width: 100%;
+}
+img.pequena {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+div.video {
+    background-color: var(--cor6);
+    position: relative;
+    display: flex;
+    height: 355px;
+}
+
+div.video>iframe {
+    margin: auto;
+   width: 560px;
+}   
+
+aside {
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--cor1);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.178);
+}
+
+aside>h3 {
+    background-image: var(--degrade-principal);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside >ul {
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside; /*Coloca bolinha da lista para dentro do box*/
+    columns: 2; /*quantidade de colunas da lista*/
+}
+
+footer {
+    background-image: var(--degrade-principal);
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
